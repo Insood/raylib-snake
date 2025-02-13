@@ -20,7 +20,7 @@
                     "PROJECT_NAME=${fileBasenameNoExtension}",
                     "OBJS=${fileBasenameNoExtension}.cpp",
                     "BUILD_MODE=DEBUG"
-                ],
+                ]
             },
             "group": {
                 "kind": "build",
@@ -45,12 +45,28 @@
                     "RAYLIB_PATH=C:/raylib/raylib",
                     "PROJECT_NAME=${fileBasenameNoExtension}",
                     "OBJS=${fileBasenameNoExtension}.cpp"
-                ],
+                ]
             },
             "group": "build",
             "problemMatcher": [
                 "$gcc"
             ]
-        }
+        },
+        // {
+        //     "label": "build for web",
+        //     "type": "process",
+        //     "command": "make",
+        //     "windows": {
+        //         "command": "C:/raylib/emsdk/upstream/emscripten/emcc",
+        //         "args": [
+        //             "-o build.html ${fileBasenameNoExtension}.cpp",
+        //             "CLFAGS=-Wall D_DEFAULT_SOURCE -Wno-missing-braces -Wunused-result -O3 -I. -I$(RAYLIB_PATH)/src -I$(RAYLIB_PATH)/external -DPLATFORM_WEB",
+        //             "LDFLAGS=-L. -L$(RAYLIB_PATH)/src -sUSE_GLFW=3 -sEXPORTED_RUNTIME_METHODS=ccall -sASYNCIFY --shell-file $(RAYLIB_PATH)/src/shell.html",
+        //             "LDLIBS=$(RAYLIB_PATH)/src/libraylib.web.a",
+        //             "RESOURCES=--preload-file $(RESOURCES_PATH)"
+        //         ]
+        //     },
+        //     "problemMatcher": []
+        // }
     ]
 }
